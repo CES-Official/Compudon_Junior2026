@@ -50,7 +50,7 @@
       border-radius: 14px;
       padding: 1.4rem 1.5rem;
       display: flex;
-      align-items: stretch;
+      align-items: flex-start;
       gap: 1rem;
       box-shadow: 0 4px 18px rgba(15,110,86,0.07);
       transition: transform 0.22s ease, box-shadow 0.22s ease;
@@ -78,15 +78,7 @@
       font-size: 1.2rem;
       color: #0f6e56;
     }
-    .module-card .mc-body {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      min-height: 90px;
-    }
-    .module-card .mc-title {
-      flex: 1;
-    }
+    .module-card .mc-body {}
     .module-card .mc-label {
       font-size: 0.7rem;
       font-weight: 700;
@@ -100,8 +92,7 @@
       font-weight: 600;
       color: #1a2e28;
       line-height: 1.4;
-      margin: 0 0 0.55rem;
-      flex: 1;
+      margin: 0;
     }
 
     /* Notice card (the first bullet about syllabus) */
@@ -320,10 +311,7 @@
                       <!-- Notice banner -->
                       <div class="notice-banner">
                         <i class="bi bi-info-circle-fill"></i>
-                        <span>
-                          Click on the <p style="font-weight: bolder; display: inline;"> Paper and Recommendations </p> button to know the official research/recommendation paper behind that particular objective.
-                        </br>
-                           Syllabus depth differs between Grades 3–5 and Grades 6–8</span>
+                        <span>Syllabus amount differs between Grades 3–5 and Grades 6–8</span>
                       </div>
 
                       <!-- Module cards grid -->

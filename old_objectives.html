@@ -50,7 +50,7 @@
       border-radius: 14px;
       padding: 1.4rem 1.5rem;
       display: flex;
-      align-items: stretch;
+      align-items: flex-start;
       gap: 1rem;
       box-shadow: 0 4px 18px rgba(15,110,86,0.07);
       transition: transform 0.22s ease, box-shadow 0.22s ease;
@@ -78,15 +78,7 @@
       font-size: 1.2rem;
       color: #0f6e56;
     }
-    .module-card .mc-body {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      min-height: 90px;
-    }
-    .module-card .mc-title {
-      flex: 1;
-    }
+    .module-card .mc-body {}
     .module-card .mc-label {
       font-size: 0.7rem;
       font-weight: 700;
@@ -100,8 +92,7 @@
       font-weight: 600;
       color: #1a2e28;
       line-height: 1.4;
-      margin: 0 0 0.55rem;
-      flex: 1;
+      margin: 0;
     }
 
     /* Notice card (the first bullet about syllabus) */
@@ -119,137 +110,6 @@
       font-size: 0.95rem;
     }
     .notice-banner i { font-size: 1.3rem; color: #f59e0b; flex-shrink: 0; }
-
-    /* ── Paper button on each card ── */
-    .mc-paper-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      margin-top: 0.55rem;
-      padding: 3px 10px;
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #0f6e56;
-      background: #e1f5ee;
-      border: 1px solid #b2e8d4;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: background 0.18s, color 0.18s;
-    }
-    .mc-paper-btn:hover { background: #0f6e56; color: #fff; border-color: #0f6e56; }
-    .mc-paper-btn i { font-size: 0.75rem; }
-
-    /* ── Modal overlay ── */
-    .paper-modal-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(10,30,25,0.55);
-      backdrop-filter: blur(3px);
-      z-index: 9999;
-      align-items: center;
-      justify-content: center;
-      padding: 1.5rem;
-    }
-    .paper-modal-overlay.open { display: flex; }
-    .paper-modal {
-      background: #fff;
-      border-radius: 18px;
-      max-width: 680px;
-      width: 100%;
-      max-height: 85vh;
-      overflow-y: auto;
-      box-shadow: 0 24px 64px rgba(10,30,25,0.22);
-      animation: modalIn 0.22s ease;
-    }
-    @keyframes modalIn {
-      from { opacity: 0; transform: translateY(18px) scale(0.97); }
-      to   { opacity: 1; transform: none; }
-    }
-    .paper-modal-head {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      padding: 1.5rem 1.6rem 1rem;
-      border-bottom: 1px solid #e2f0eb;
-      position: sticky;
-      top: 0;
-      background: #fff;
-      border-radius: 18px 18px 0 0;
-    }
-    .paper-modal-icon {
-      flex-shrink: 0;
-      width: 44px; height: 44px;
-      border-radius: 11px;
-      background: linear-gradient(135deg, #e1f5ee, #b2e8d4);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.2rem;
-      color: #0f6e56;
-    }
-    .paper-modal-meta { flex: 1; }
-    .paper-modal-category {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #1aaf87;
-      margin-bottom: 0.2rem;
-    }
-    .paper-modal-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: #0f4035;
-      line-height: 1.4;
-      margin: 0 0 0.2rem;
-    }
-    .paper-modal-author {
-      font-size: 0.78rem;
-      color: #6b8f82;
-    }
-    .paper-modal-close {
-      background: none;
-      border: none;
-      font-size: 1.3rem;
-      color: #6b8f82;
-      cursor: pointer;
-      padding: 0;
-      line-height: 1;
-      margin-left: 0.5rem;
-      flex-shrink: 0;
-    }
-    .paper-modal-close:hover { color: #0f6e56; }
-    .paper-modal-body { padding: 1.2rem 1.6rem 1.6rem; }
-    .reco-group-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #0f6e56;
-      margin: 1rem 0 0.35rem;
-    }
-    .reco-list {
-      list-style: none;
-      padding: 0; margin: 0;
-      display: flex; flex-direction: column; gap: 0.4rem;
-    }
-    .reco-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-      font-size: 0.875rem;
-      color: #2d4a3e;
-      line-height: 1.5;
-    }
-    .reco-list li::before {
-      content: '›';
-      color: #1aaf87;
-      font-weight: 700;
-      font-size: 1rem;
-      flex-shrink: 0;
-      margin-top: -1px;
-    }
     </style>
     <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -320,10 +180,7 @@
                       <!-- Notice banner -->
                       <div class="notice-banner">
                         <i class="bi bi-info-circle-fill"></i>
-                        <span>
-                          Click on the <p style="font-weight: bolder; display: inline;"> Paper and Recommendations </p> button to know the official research/recommendation paper behind that particular objective.
-                        </br>
-                           Syllabus depth differs between Grades 3–5 and Grades 6–8</span>
+                        <span>Syllabus amount differs between Grades 3–5 and Grades 6–8</span>
                       </div>
 
                       <!-- Module cards grid -->
@@ -334,7 +191,6 @@
                           <div class="mc-body">
                             <div class="mc-label">Module 1</div>
                             <p class="mc-title">Managing Harmful Interactions and Exploitation Risks</p>
-                            <button class="mc-paper-btn" onclick="openModal('modal-cyber')"><i class="bi bi-journal-text"></i> Paper &amp; Recommendations</button>
                           </div>
                         </div>
 
@@ -343,7 +199,6 @@
                           <div class="mc-body">
                             <div class="mc-label">Module 2</div>
                             <p class="mc-title">Resisting Manipulation and Evaluating Digital Content</p>
-                            <button class="mc-paper-btn" onclick="openModal('modal-cyber')"><i class="bi bi-journal-text"></i> Paper &amp; Recommendations</button>
                           </div>
                         </div>
 
@@ -352,7 +207,6 @@
                           <div class="mc-body">
                             <div class="mc-label">Module 3</div>
                             <p class="mc-title">Protecting Privacy and Digital Identity</p>
-                            <button class="mc-paper-btn" onclick="openModal('modal-cyber')"><i class="bi bi-journal-text"></i> Paper &amp; Recommendations</button>
                           </div>
                         </div>
 
@@ -361,7 +215,6 @@
                           <div class="mc-body">
                             <div class="mc-label">Module 4</div>
                             <p class="mc-title">Applying Creativity to Enhance Learning Across Subjects</p>
-                            <button class="mc-paper-btn" onclick="openModal('modal-creativity')"><i class="bi bi-journal-text"></i> Paper &amp; Recommendations</button>
                           </div>
                         </div>
 
@@ -370,7 +223,6 @@
                           <div class="mc-body">
                             <div class="mc-label">Module 5</div>
                             <p class="mc-title">Designing Effective and Engaging Learning Strategies</p>
-                            <button class="mc-paper-btn" onclick="openModal('modal-creativity')"><i class="bi bi-journal-text"></i> Paper &amp; Recommendations</button>
                           </div>
                         </div>
 
@@ -379,7 +231,6 @@
                           <div class="mc-body">
                             <div class="mc-label">Module 6</div>
                             <p class="mc-title">Assessing and Improving Thinking Skills Beyond Academic Scores</p>
-                            <button class="mc-paper-btn" onclick="openModal('modal-creativity')"><i class="bi bi-journal-text"></i> Paper &amp; Recommendations</button>
                           </div>
                         </div>
 
@@ -388,7 +239,6 @@
                           <div class="mc-body">
                             <div class="mc-label">Module 7</div>
                             <p class="mc-title">Identifying and Analyzing Disinformation</p>
-                            <button class="mc-paper-btn" onclick="openModal('modal-media')"><i class="bi bi-journal-text"></i> Paper &amp; Recommendations</button>
                           </div>
                         </div>
 
@@ -397,7 +247,6 @@
                           <div class="mc-body">
                             <div class="mc-label">Module 8</div>
                             <p class="mc-title">Understanding Susceptibility and Building Resistance to Misinformation</p>
-                            <button class="mc-paper-btn" onclick="openModal('modal-media')"><i class="bi bi-journal-text"></i> Paper &amp; Recommendations</button>
                           </div>
                         </div>
 
@@ -406,7 +255,6 @@
                           <div class="mc-body">
                             <div class="mc-label">Module 9</div>
                             <p class="mc-title">Understanding AI Systems and Their Limitations</p>
-                            <button class="mc-paper-btn" onclick="openModal('modal-ai')"><i class="bi bi-journal-text"></i> Paper &amp; Recommendations</button>
                           </div>
                         </div>
 
@@ -415,7 +263,6 @@
                           <div class="mc-body">
                             <div class="mc-label">Module 10</div>
                             <p class="mc-title">Applying Data Fundamentals in AI Contexts</p>
-                            <button class="mc-paper-btn" onclick="openModal('modal-ai')"><i class="bi bi-journal-text"></i> Paper &amp; Recommendations</button>
                           </div>
                         </div>
 
@@ -424,7 +271,6 @@
                           <div class="mc-body">
                             <div class="mc-label">Module 11</div>
                             <p class="mc-title">Using AI Tools Effectively and Responsibly</p>
-                            <button class="mc-paper-btn" onclick="openModal('modal-ai')"><i class="bi bi-journal-text"></i> Paper &amp; Recommendations</button>
                           </div>
                         </div>
 
@@ -433,7 +279,6 @@
                           <div class="mc-body">
                             <div class="mc-label">Module 12</div>
                             <p class="mc-title">Evaluating the Impact and Ethics of AI</p>
-                            <button class="mc-paper-btn" onclick="openModal('modal-ai')"><i class="bi bi-journal-text"></i> Paper &amp; Recommendations</button>
                           </div>
                         </div>
 
@@ -577,161 +422,6 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <!-- ══════════ PAPER MODALS ══════════ -->
-
-  <!-- Cyber Safety Modal -->
-  <div class="paper-modal-overlay" id="modal-cyber" onclick="closeOnOverlay(event, 'modal-cyber')">
-    <div class="paper-modal">
-      <div class="paper-modal-head">
-        <div class="paper-modal-icon"><i class="bi bi-shield-check"></i></div>
-        <div class="paper-modal-meta">
-          <div class="paper-modal-category">Cyber Safety</div>
-          <p class="paper-modal-title">Protecting Children Online — Selected EU, National and Regional Laws and Initiatives</p>
-          <div class="paper-modal-author">Maria Niestadt, April 2025 &nbsp;·&nbsp; EPRS | European Parliamentary Research Service</div>
-        </div>
-        <button class="paper-modal-close" onclick="closeModal('modal-cyber')" aria-label="Close"><i class="bi bi-x-lg"></i></button>
-      </div>
-      <div class="paper-modal-body">
-        <ul class="reco-list">
-          <li>Enforce existing EU child-online-safety regulations (DSA, GDPR, AVMSD) fully and consistently across member states</li>
-          <li>Prohibit profiling-based advertising targeting minors and restrict algorithmic amplification of harmful content to children</li>
-          <li>Mandate age-appropriate design and default privacy settings for platforms likely accessed by children</li>
-          <li>Strengthen obligations for platforms to detect, remove and report child sexual abuse material (CSAM) promptly</li>
-          <li>Establish specialised multi-agency response units combining law enforcement, social services and digital platform cooperation</li>
-          <li>Classify compulsive digital use as a public health risk and create specialised treatment pathways</li>
-          <li>Fund large-scale, evidence-based digital literacy and online safety education programmes in schools</li>
-          <li>Guarantee children the right to erasure of their digital footprint and prohibit sharing of children's biometric data without explicit parental consent</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- Creativity & Critical Thinking Modal -->
-  <div class="paper-modal-overlay" id="modal-creativity" onclick="closeOnOverlay(event, 'modal-creativity')">
-    <div class="paper-modal">
-      <div class="paper-modal-head">
-        <div class="paper-modal-icon"><i class="bi bi-lightbulb"></i></div>
-        <div class="paper-modal-meta">
-          <div class="paper-modal-category">Creativity &amp; Critical Thinking</div>
-          <p class="paper-modal-title">Fostering Students' Creativity and Critical Thinking: What It Means in School</p>
-          <div class="paper-modal-author">OECD, 2019</div>
-        </div>
-        <button class="paper-modal-close" onclick="closeModal('modal-creativity')" aria-label="Close"><i class="bi bi-x-lg"></i></button>
-      </div>
-      <div class="paper-modal-body">
-        <ul class="reco-list">
-          <li>Make creativity and critical thinking explicit learning objectives across all subjects at both primary and secondary levels</li>
-          <li>Integrate creativity and critical thinking into regular subject teaching rather than treating them as standalone or generic skills</li>
-          <li>Adopt teacher-friendly OECD rubrics to clarify, teach and assess creativity and critical thinking in classrooms</li>
-          <li>Use creativity and critical-thinking rubrics formatively — for lesson design, student feedback and self-assessment — not only for grading</li>
-          <li>Redesign or adapt lesson plans using structured design criteria that embed creativity and critical thinking while maintaining curriculum content</li>
-          <li>Develop students' creativity and critical thinking through open, challenging, multi-perspective tasks that allow for risk-taking and reflection</li>
-          <li>Provide continuous, practice-embedded teacher professional development combining training, individual support and peer learning</li>
-          <li>Support professional learning communities so teachers can collaboratively adapt tools and share effective practices</li>
-          <li>Assess creativity and critical thinking separately from technical subject mastery, using clear progression levels</li>
-          <li>Recognise both learning processes and final products when assessing creativity and critical thinking</li>
-          <li>Validate interventions rigorously before scaling them up across systems or countries</li>
-          <li>Align curriculum expectations, teaching practices and assessment approaches to support creativity and critical thinking consistently</li>
-          <li>Treat creativity and critical thinking as core future-oriented skills essential for innovation, wellbeing and democratic participation</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- Media Literacy Modal -->
-  <div class="paper-modal-overlay" id="modal-media" onclick="closeOnOverlay(event, 'modal-media')">
-    <div class="paper-modal">
-      <div class="paper-modal-head">
-        <div class="paper-modal-icon"><i class="bi bi-newspaper"></i></div>
-        <div class="paper-modal-meta">
-          <div class="paper-modal-category">Media Literacy</div>
-          <p class="paper-modal-title">Fostering a Key Civic Skill in a Digital Information Environment</p>
-          <div class="paper-modal-author">Tarja Laaninen, May 2025 &nbsp;·&nbsp; EPRS | European Parliamentary Research Service</div>
-        </div>
-        <button class="paper-modal-close" onclick="closeModal('modal-media')" aria-label="Close"><i class="bi bi-x-lg"></i></button>
-      </div>
-      <div class="paper-modal-body">
-        <ul class="reco-list">
-          <li>Develop dynamic media literacy curricula that evolve alongside the changing digital information environment</li>
-          <li>Support educators to bridge school and out-of-school media practices</li>
-          <li>Raise awareness about disinformation and misuse of data in education</li>
-          <li>Invest in research on sense-making and inoculation approaches to building resilience against false information</li>
-          <li>Expand research on media literacy across all school levels</li>
-          <li>Facilitate large-scale collaboration initiatives between educational institutions, civil society and media organisations</li>
-          <li>Align media and digital literacy policies with teacher education and continuous professional development</li>
-          <li>Support inclusion of media literacy in OECD PISA assessments</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- AI Literacy Modal -->
-  <div class="paper-modal-overlay" id="modal-ai" onclick="closeOnOverlay(event, 'modal-ai')">
-    <div class="paper-modal">
-      <div class="paper-modal-head">
-        <div class="paper-modal-icon"><i class="bi bi-robot"></i></div>
-        <div class="paper-modal-meta">
-          <div class="paper-modal-category">AI Literacy</div>
-          <p class="paper-modal-title">A Rapid Review of AI Literacy Frameworks, with Policy Recommendations</p>
-          <div class="paper-modal-author">Dr Veli Hillman, Prof. Wayne Holmes, Tania Duarte (We and AI) &nbsp;·&nbsp; The Royal Society</div>
-        </div>
-        <button class="paper-modal-close" onclick="closeModal('modal-ai')" aria-label="Close"><i class="bi bi-x-lg"></i></button>
-      </div>
-      <div class="paper-modal-body">
-        <div class="reco-group-label">A. Address the Needs of the UK</div>
-        <ul class="reco-list">
-          <li>Be clear who AI literacy is for</li>
-          <li>Define AI literacy clearly and comprehensively</li>
-          <li>Prioritise the human dimension of AI</li>
-          <li>Create a coherent UK-wide approach</li>
-        </ul>
-        <div class="reco-group-label">B. Build the Infrastructure for Educational Success</div>
-        <ul class="reco-list">
-          <li>Create a national multi-stakeholder AI literacy task force</li>
-          <li>Prioritise teacher training and development</li>
-          <li>Resource AI literacy with clear, realistic funding models</li>
-          <li>Guard against undue corporate influence</li>
-        </ul>
-        <div class="reco-group-label">C. Take an Iterative and Responsive Approach</div>
-        <ul class="reco-list">
-          <li>Commission pilot programmes and longitudinal research</li>
-          <li>Align with existing digital, media and data literacy frameworks</li>
-          <li>Develop AI-literacy-specific assessment tools</li>
-          <li>Map and support grassroots AI literacy initiatives</li>
-        </ul>
-        <div class="reco-group-label">D. Create a Future-Ready UK</div>
-        <ul class="reco-list">
-          <li>Embed AI literacy across the curriculum</li>
-          <li>Address equity and accessibility</li>
-          <li>Safeguard children</li>
-          <li>Connect classrooms to society</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    function openModal(id) {
-      document.getElementById(id).classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeModal(id) {
-      document.getElementById(id).classList.remove('open');
-      document.body.style.overflow = '';
-    }
-    function closeOnOverlay(event, id) {
-      if (event.target === document.getElementById(id)) closeModal(id);
-    }
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        document.querySelectorAll('.paper-modal-overlay.open').forEach(function(el) {
-          el.classList.remove('open');
-        });
-        document.body.style.overflow = '';
-      }
-    });
-  </script>
 
 </body>
 
