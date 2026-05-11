@@ -205,233 +205,41 @@
   <main class="main">
     <div id="header"></div>
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
+   <section id="hero" class="hero section dark-background">
+  <div class="container">
+    <div class="row gy-4">
 
-      <div class="container">
-        <div class="row gy-4">
-           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
-            <h1> A Digital Intelligence Championship</h1>
-            <p>COMPUDON Junior is a championship for school students with syllabus covering: </p>
-            <ul>
-              <li>Comprehensive Cyber Safety Protocols </li>
-              <li>Creativity and Critical Thinking </li>
-              <li>Developing Media Literacy </li>
-              <li>AI Literacy and Usage</li>
-            </ul>
-            <div class="d-flex">
-              <a href="/objectives.html" class="btn-get-started" color="#ffffff">Know More</a>
-              <!-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
-            </div>
-          </div>
-          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/Present Past Suppoorters white.png" class="img-fluid animated" alt="Supporters">
-          </div>
+      <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
+        <h2>Inspired by the World's Leading Research Bodies. Designed to prepare every child for Life.</h2>
+        <p style="font-weight: 600;">COMPUDON Junior is a 21st century life skills global championship for school students worldwide.</p>
+        <div class="d-flex">
+          <a href="/objectives.html" class="btn-get-started">Know More</a>
         </div>
       </div>
 
-    </section><!-- /Hero Section -->
-      <!--Slider Start -->
-<!-- Slider End -->
-    <!-- Clients Section -->
-    <section id="clients" class="clients section light-background">
-
-      <!-- <div class="container" data-aos="zoom-in"> -->
-        <div class="container">
-
-        <div class="row gy-5">
-<div class="" style="text-align: CENTER;" data-aos="fade-up" data-aos-delay="200">
-</br>
-        <h5><span style="color: #08063c; font-size: 25px;">Registration for Season VII  - To be Announced</span></h5>
-        <!-- <h5 style="text-align: left;"><span style="color: #08063c; font-size: 20px;">Fee Rs. 499/ per student (all inclusive)</span></h5> -->
-        <!-- <h5 style="text-align: left;"><span style="color: #ffffff; font-size: medium;">Fee Rs. 499/ per student (all inclusive)</span></h5> -->
-          <!-- <div class="d-flex">
-              <a href="https://courses.cyberlearning.in/" class="btn-enroll" color="#ffffff">Enroll Now</a>
-              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
-            </div> 
-</div>
-<div class="" data-aos="fade-up" data-aos-delay="200">
-<div class="countdown-container">
-        <!-- <h1>Countdown to October 5, 2025</h1> -->
-        <div class="countdown">
-            <div class="time-block">
-                <span id="weeks">0</span>
-                <label>Weeks</label>
-            </div>
-            <div class="time-block">
-                <span id="days">0</span>
-                <label>Days</label>
-            </div>
-            <div class="time-block">
-                <span id="hours">0</span>
-                <label>Hours</label>
-            </div>
-            <div class="time-block">
-                <span id="minutes">0</span>
-                <label>Minutes</label>
-            </div>
-            <div class="time-block">
-                <span id="seconds">0</span>
-                <label>Seconds</label>
-            </div>
+      <div class="col-lg-6 order-1 order-lg-2 hero-img d-flex align-items-center justify-content-center" data-aos="zoom-out" data-aos-delay="200">
+        <div style="
+          width: 100%;
+          border-radius: 16px;
+          overflow: hidden;
+          border: 1px solid rgba(255,255,255,0.1);
+          background: #000;
+        ">
+          <video
+            style="width: 100%; height: auto; display: block;"
+            controls
+            poster="./assets/video/thumbnail.png"
+          >
+            <source src="https://youtu.be/ptU5QwRHNyo" type="video/mp4">
+          </video>
         </div>
+      </div>
+
     </div>
-    </div>
-    </div>
-
-    <script>
-        // Set the target date: August 15, 2025, 00:00:00
-        // const targetDate = new Date('October 31, 2025 00:00:00').getTime();
-
-        // Update the countdown every second
-        const countdown = setInterval(() => {
-            const now = new Date().getTime();
-            const distance = targetDate - now;
-
-            // Calculate time components
-            const weeks = Math.floor(distance / (1000 * 60 * 60 * 24 * 7));
-            const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the values
-            document.getElementById('weeks').textContent = weeks;
-            document.getElementById('days').textContent = days;
-            document.getElementById('hours').textContent = hours;
-            document.getElementById('minutes').textContent = minutes;
-            document.getElementById('seconds').textContent = seconds;
-
-            // If the countdown is over, display a message
-            if (distance < 0) {
-                clearInterval(countdown);
-                document.querySelector('.countdown-container h1').textContent = 'Countdown Ended!';
-                document.getElementById('weeks').textContent = 0;
-                document.getElementById('days').textContent = 0;
-                document.getElementById('hours').textContent = 0;
-                document.getElementById('minutes').textContent = 0;
-                document.getElementById('seconds').textContent = 0;
-            }
-        }, 1000);
-    </script>
-
-
-
-
-
-</div>
+  </div>
 </section>
-        <!-- <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 5,
-                  "spaceBetween": 120
-                },
-                "1200": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/clients-1.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/clients-2.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/clients-3.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/clients-4.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/clients-5.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/clients-6.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/clients-7.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/clients-8.webp" class="img-fluid" alt=""></div>
-          </div>
-        </div> -->
-
-      </div>
-
-    </section><!-- /Clients Section -->
-
-        <!-- Services Section -->
-    <section id="services" class="services section light-background"> -->
-
-      <!-- Section Title -->
-     <div class="container section-title" data-aos="fade-up">
-        <h2>Season VII</h2>
-        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
-     </div>
-      <!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-activity icon"></i></div>
-              <h4><a href="/registration.html" class="stretched-link">Registration</a></h4>
-              <p>Registration Options for Schools and Students</p>
-            </div>
-          </div>
-          <!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
-              <h4><a href="/resources.html" class="stretched-link">Resources</a></h4>
-              <p>Explore variety of related learning resources here</p>
-            </div>
-          </div>
-          <!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
-              <h4><a href="/objectives.html" class="stretched-link">Learning Objectives</a></h4>
-              <p>Check out COMPUDON Junior Season VII Learning Objectives here</p>
-            </div>
-          </div>
-          <!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-broadcast icon"></i></div>
-              <h4><a href="/workshops.html" class="stretched-link">Workshops</a></h4>
-              <p>Learn about the workshop schedule for Season VII and explore previous seasons workshops here</p>
-            </div>
-          </div>
-          <!-- End Service Item -->
-
-        </div>
-
-      </div>
-
-    </section>
-    <!-- /Services Section -->
-
-    <!-- Portfolio Section -->
+      <!--Slider Start -->
+      <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section">
 
       <!-- Section Title -->
@@ -638,7 +446,7 @@
                   <div class="vc-play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
                 </div>
                 <div class="vc-iframe-wrap"></div>
-                <div class="vc-card-title">David Saedi: CEO & Founder, WinnowPro</div>
+                <div class="vc-card-title">David Saedi: Former President & CEO at Certiport, Advisory Board Member at American Management Association </div>
               </div>
             </div>
 
@@ -783,6 +591,207 @@
 
     </section>
 
+<!-- Slider End -->
+    <!-- Clients Section -->
+    <section id="clients" class="clients section light-background">
+
+      <!-- <div class="container" data-aos="zoom-in"> -->
+        <div class="container">
+
+        <div class="row gy-5">
+<div class="" style="text-align: CENTER;" data-aos="fade-up" data-aos-delay="200">
+</br>
+        <h5><span style="color: #08063c; font-size: 25px;">Registration for Season VII  - To be Announced</span></h5>
+        <!-- <h5 style="text-align: left;"><span style="color: #08063c; font-size: 20px;">Fee Rs. 499/ per student (all inclusive)</span></h5> -->
+        <!-- <h5 style="text-align: left;"><span style="color: #ffffff; font-size: medium;">Fee Rs. 499/ per student (all inclusive)</span></h5> -->
+          <!-- <div class="d-flex">
+              <a href="https://courses.cyberlearning.in/" class="btn-enroll" color="#ffffff">Enroll Now</a>
+              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
+            </div> 
+</div>
+<div class="" data-aos="fade-up" data-aos-delay="200">
+<div class="countdown-container">
+        <!-- <h1>Countdown to October 5, 2025</h1> -->
+        <div class="countdown">
+            <div class="time-block">
+                <span id="weeks">0</span>
+                <label>Weeks</label>
+            </div>
+            <div class="time-block">
+                <span id="days">0</span>
+                <label>Days</label>
+            </div>
+            <div class="time-block">
+                <span id="hours">0</span>
+                <label>Hours</label>
+            </div>
+            <div class="time-block">
+                <span id="minutes">0</span>
+                <label>Minutes</label>
+            </div>
+            <div class="time-block">
+                <span id="seconds">0</span>
+                <label>Seconds</label>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <script>
+        // Set the target date: August 15, 2025, 00:00:00
+        // const targetDate = new Date('October 31, 2025 00:00:00').getTime();
+
+        // Update the countdown every second
+        const countdown = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            // Calculate time components
+            const weeks = Math.floor(distance / (1000 * 60 * 60 * 24 * 7));
+            const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the values
+            document.getElementById('weeks').textContent = weeks;
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.querySelector('.countdown-container h1').textContent = 'Countdown Ended!';
+                document.getElementById('weeks').textContent = 0;
+                document.getElementById('days').textContent = 0;
+                document.getElementById('hours').textContent = 0;
+                document.getElementById('minutes').textContent = 0;
+                document.getElementById('seconds').textContent = 0;
+            }
+        }, 1000);
+    </script>
+
+
+
+
+
+</div>
+</section>
+        <!-- <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 5,
+                  "spaceBetween": 120
+                },
+                "1200": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/clients-1.webp" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/clients-2.webp" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/clients-3.webp" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/clients-4.webp" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/clients-5.webp" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/clients-6.webp" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/clients-7.webp" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/clients-8.webp" class="img-fluid" alt=""></div>
+          </div>
+        </div> -->
+
+      </div>
+
+    </section><!-- /Clients Section -->
+
+        <!-- Services Section -->
+    <section id="services" class="services section light-background"> -->
+
+      <!-- Section Title -->
+     <div class="container section-title" data-aos="fade-up">
+        <h2>Season VII</h2>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+     </div>
+      <!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-activity icon"></i></div>
+              <h4><a href="https://courses.cyberlearning.in/" class="stretched-link">Registration</a></h4>
+              <p>Links to LMS for registration</p>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
+              <h4><a href="/resources.html" class="stretched-link">Resources</a></h4>
+              <p>Explore variety of related learning resources here</p>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
+              <h4><a href="/objectives.html" class="stretched-link">Learning Objectives</a></h4>
+              <p>Check out COMPUDON Junior Season VII Learning Objectives here</p>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-broadcast icon"></i></div>
+              <h4><a href="/workshops.html" class="stretched-link">Workshops</a></h4>
+              <p>Learn about the workshop schedule for Season VII and explore previous seasons workshops here</p>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- /Services Section -->
+
+    
  <!-- Work Process Section -->
     <section id="work-process" class="work-process section">
 
